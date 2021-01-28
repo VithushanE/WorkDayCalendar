@@ -1,38 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://MomentJS.com/downloads/moment.js"></script>
+  <title>Work Day Scheduler</title>
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <!-- Timeblocks go here -->
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+        <th scope="row" width ="20px">9am</th>
+        <td colspan="2" class="table-active">Larry the Bird</td>
+        <td width= "60px"><button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+      </tr>
+        <tr>
+          <th scope="row">10am</th>
+          <td colspan="2" class="table-active">Larry the Bird</td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+        </tr>
+        <tr>
+          <th scope="row">11am</th>
+          <td colspan="2" class="table-active">Larry the Bird</td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+        </tr>
+        <tr>
+          <th scope="row">12pm</th>
+          <td colspan="2" class="table-active">Larry the Bird</td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+        </tr>
+        <tr>
+          <th scope="row">1pm</th>
+          <td colspan="2" class="table-active">Larry the Bird</td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+        </tr>
+        <tr>
+          <th scope="row">2pm</th>
+          <td colspan="2" class="table-active">Larry the Bird</td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+        </tr>
+        <tr>
+          <th scope="row">3pm</th>
+          <td colspan="2" class="table-active">Larry the Bird</td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+        </tr>
+        <tr>
+          <th scope="row">4pm</th>
+          <td colspan="2" class="table-active">Larry the Bird</td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+        </tr>
+        <tr>
+          <th scope="row">5pm</th>
+          <td colspan="2" class="table-active">Larry the Bird</td>
+          <td><button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script>
+
+ // TO DO LIST: 
+ // Create content writable in td
+ // need to have save button save the content in <td> and save to local storage  
+
+</script>
+</body>
+
 </html>
