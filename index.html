@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://MomentJS.com/downloads/moment.js"></script>
+  <script>src="https://code.jquery.com/jquery-3.5.1.js" </script>
   <title>Work Day Scheduler</title>
 </head>
 
@@ -24,51 +25,63 @@
     <!-- Timeblocks go here -->
     <table class="table table-hover">
       <tbody>
+
         <tr>
-        <th scope="row" width ="20px">9am</th>
-        <td colspan="2" class="table-active">Larry the Bird</td>
-        <td width= "60px"><button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+        <th scope="row" width ="20px" class='hour' id='9' >9am</th>
+        <!--Each middle section has an area to enter data-->
+        <td colspan="2" class="table-active" ><textarea id='textInput0'class= 'form-control' placeholder="enter text here!"  ></textarea></td>
+        <!--this is where the data will be saved-->
+        <td width= "60px"><button onclick="getElementById('demo').innerHTML = Date()" type="button" class="btn btn-primary btn-lg" >Save</button></td>
       </tr>
+
         <tr>
-          <th scope="row">10am</th>
-          <td colspan="2" class="table-active">Larry the Bird</td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+          <th scope="row"class='hour' id='10' >10am</th>
+          <td colspan="2" class="table-active" ><textarea id='textInput1'class= 'form-control'placeholder="enter text here!"  ></textarea></td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button" class="btn btn-primary btn-lg" >Save</button></td>
         </tr>
+
         <tr>
-          <th scope="row">11am</th>
-          <td colspan="2" class="table-active">Larry the Bird</td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+          <th scope="row" class='hour' id='11'>11am</th>
+          <td colspan="2" class="table-active" ><textarea id='textInput2'class= 'form-control'placeholder="enter text here!"  ></textarea></td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()"type="button" class="btn btn-primary btn-lg" >Save</button></td>
         </tr>
+
         <tr>
-          <th scope="row">12pm</th>
-          <td colspan="2" class="table-active">Larry the Bird</td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+          <th scope="row" class='hour'id='12'>12pm</th>
+          <td colspan="2" class="table-active" ><textarea id='textInput3'class= 'form-control'placeholder="enter text here!" ></textarea></td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button" class="btn btn-primary btn-lg" >Save</button></td>
         </tr>
+
         <tr>
-          <th scope="row">1pm</th>
-          <td colspan="2" class="table-active">Larry the Bird</td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+          <th scope="row" class='hour' id='13'>1pm</th>
+          <td colspan="2" class="table-active" ><textarea id='textInput4'class= 'form-control'placeholder="enter text here!" ></textarea></td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button" class="btn btn-primary btn-lg">Save</button></td>
         </tr>
+
         <tr>
-          <th scope="row">2pm</th>
-          <td colspan="2" class="table-active">Larry the Bird</td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+          <th scope="row" class='hour' id='14'>2pm</th>
+          <td colspan="2" class="table-active" ><textarea id='textInput5'class= 'form-control'placeholder="enter text here!" ></textarea></td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button" class="btn btn-primary btn-lg">Save</button></td>
         </tr>
+
         <tr>
-          <th scope="row">3pm</th>
-          <td colspan="2" class="table-active">Larry the Bird</td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+          <th scope="row" class='hour' id='15'>3pm</th>
+          <td colspan="2" class="table-active" ><textarea id='textInput6'class= 'form-control'placeholder="enter text here!" ></textarea></td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button" class="btn btn-primary btn-lg">Save</button></td>
         </tr>
+
         <tr>
-          <th scope="row">4pm</th>
-          <td colspan="2" class="table-active">Larry the Bird</td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+          <th scope="row" class='hour' id='16'>4pm</th>
+          <td colspan="2" class="table-active" ><textarea id='textInput7'class= 'form-control'placeholder="enter text here!"  ></textarea></td>
+          <td> <button onclick="getElementById('demo').innerHTML = Date()"type="button" class="btn btn-primary btn-lg">Save</button></td>
         </tr>
+
         <tr>
-          <th scope="row">5pm</th>
-          <td colspan="2" class="table-active">Larry the Bird</td>
-          <td><button onclick="getElementById('demo').innerHTML = Date()">Save</button></td>
+          <th scope="row" class='hour' id='17'>5pm</th>
+          <td colspan="2" class="table-active" ><textarea id='textInput8' placeholder="enter text here!" class= 'form-control'></textarea></td>
+          <td><button onclick="getElementById('demo').innerHTML = Date()"type="button" class="btn btn-primary btn-lg" >Save</button></td>
         </tr>
+
       </tbody>
     </table>
   </div>
@@ -77,9 +90,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script>
 
- // TO DO LIST: 
- // Create content writable in td
- // need to have save button save the content in <td> and save to local storage  
+// to see if it is past, present or future
+rowTime= '.class'
+
+actualTime= 
+
+document.createElement
+function colorChange(){
+  for (var i=0; i<9; i++){
+  if(rowTime < actualTime){
+    $(`#textInput${i}`).addClass('past');
+
+  } else if(rowTime> actualTime) {
+    $(`#textInput${i}`).addClass('present');
+
+  }else {
+    $(`#textInput${i}`).addClass('future');
+  }
+   
+  }
+  
+
+}
+
+
 
 </script>
 </body>
