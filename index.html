@@ -26,76 +26,89 @@
       <tbody>
 
         <tr>
-          <th scope="row" width="20px" class='hour' id='time0'>9am</th>
+          <th scope="row" width="20px" class='hour' id='9'>9am</th>
           <!--Each middle section has an area to enter data-->
-          <td colspan="2" class="table-active"><textarea id='textInput0' class='form-control'
+          <div></div>
+          <td colspan="2" class="table-active">
+            <textarea id='textInput0' class='form-control'
               placeholder="enter text here!"></textarea></td>
           <!--this is where the data will be saved-->
-          <td width="60px"><button onclick="getElementById('demo').innerHTML = Date()" type="button"
-              class="btn btn-primary btn-lg">Save</button></td>
+          <td width="60px">
+            <button onclick='saveButton(textInput0)' type="button"id="answer0"
+              class="btn btn-primary btn-lg">Save</button>
+            </td>
         </tr>
+        <div id>
+          <textarea>
+
+          </textarea>
+
+          <button onclick="saveButton(this)" ckass="btn saveBtn col-md-1">
+
+          </button>
+        </div>
 
         <tr>
-          <th scope="row" class='hour' id='time1'>10am</th>
+          <th scope="row" class='hour' id='10'>10am</th>
           <td colspan="2" class="table-active"><textarea id='textInput1' class='form-control'
               placeholder="enter text here!"></textarea></td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button"
+          <td> <button  type="button" id="answer1"
               class="btn btn-primary btn-lg">Save</button></td>
         </tr>
 
         <tr>
-          <th scope="row" class='hour' id='time2'>11am</th>
+          <th scope="row" class='hour' id='11'>11am</th>
           <td colspan="2" class="table-active"><textarea id='textInput2' class='form-control'
               placeholder="enter text here!"></textarea></td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button"
+          <td> <button type="button" id="answer2"
               class="btn btn-primary btn-lg">Save</button></td>
         </tr>
 
         <tr>
-          <th scope="row" class='hour' id='time3'>12pm</th>
+          <th scope="row" class='hour' id='12'>12pm</th>
           <td colspan="2" class="table-active"><textarea id='textInput3' class='form-control'
               placeholder="enter text here!"></textarea></td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button"
+          <td> <button type="button" id="answer3"
               class="btn btn-primary btn-lg">Save</button></td>
         </tr>
 
         <tr>
-          <th scope="row" class='hour' id='time4'>1pm</th>
+          <th scope="row" class='hour' id='13'>1pm</th>
           <td colspan="2" class="table-active"><textarea id='textInput4' class='form-control'
               placeholder="enter text here!"></textarea></td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button"
+          <td> <button type="button" id="answer4"
               class="btn btn-primary btn-lg">Save</button></td>
         </tr>
 
         <tr>
-          <th scope="row" class='hour' id='time5'>2pm</th>
+          <th scope="row" class='hour' id='14'>2pm</th>
           <td colspan="2" class="table-active"><textarea id='textInput5' class='form-control'
               placeholder="enter text here!"></textarea></td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button"
+          <td> <button  type="button" id="answer5"
               class="btn btn-primary btn-lg">Save</button></td>
         </tr>
 
         <tr>
-          <th scope="row" class='hour' id='time6'>3pm</th>
+          <th scope="row" class='hour' id='15'>3pm</th>
           <td colspan="2" class="table-active"><textarea id='textInput6' class='form-control'
               placeholder="enter text here!"></textarea></td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button"
+          <td> <button  type="button" id="answer6"
               class="btn btn-primary btn-lg">Save</button></td>
         </tr>
 
         <tr>
-          <th scope="row" class='hour' id='time7'>4pm</th>
+          <th scope="row" class='hour' id='16'>4pm</th>
           <td colspan="2" class="table-active"><textarea id='textInput7' class='form-control'
               placeholder="enter text here!"></textarea></td>
-          <td> <button onclick="getElementById('demo').innerHTML = Date()" type="button"
+          <td> <button  type="button" id="answer7"
               class="btn btn-primary btn-lg">Save</button></td>
         </tr>
 
         <tr>
-          <th scope="row" class='hour' id='time8'>5pm</th>
+          <th scope="row" class='hour' id='17'>5pm</th>
           <td colspan="2" class="table-active"><textarea id='textInput8' placeholder="enter text here!"
               class='form-control'></textarea></td>
-          <td><button onclick="getElementById('demo').innerHTML = Date()" type="button"
+          <td><button type="button" id="answer8"
               class="btn btn-primary btn-lg">Save</button></td>
         </tr>
 
@@ -105,50 +118,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script>
-
-    // to see if it is past, present or future
-    
-    $('#currentDay').html(`${moment().format("dddd MMM Do YYYY")}`)
-    function colorArea() {
-      for (var i = 0; i < 9; i++) {
-        var rowTime = $(".hour").get(i).id;
-        var x = moment().format('H');
-        actualTime = parseInt(x);
-        if (rowTime < actualTime) {
-          $(`#textInput${i}`).addClass("past");
-        }
-        else if (rowTime > actualTime) {
-          $(`#textInput${i}`).addClass("future");
-        }
-        else {
-          $(`#textInput${i}`).addClass("present");
-        }
-      }
-    }
-
-    // $('#currentDay').html(`${moment().format("dddd MMM Do YYYY")}`)
-    // var now = parseInt(moment().format('H'))
-
-    // function colorChange() {
-    //   for (var i = 0; i < 9; i++) {
-    //     if (rowTime < now) {
-    //       $(`#textInput${i}`).addClass('past');
-
-    //     } else if (rowTime > now) {
-    //       $(`#textInput${i}`).addClass('present');
-
-    //     } else {
-    //       $(`#textInput${i}`).addClass('future');
-    //     }
-
-    //   }
-    
-    // }
-
-
-
-  </script>
+  <script>src="script.js"</script>
 </body>
 
 </html>
